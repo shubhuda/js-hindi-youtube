@@ -33,3 +33,40 @@ const myFunc = function(){
 console.log(typeof heroes); // object
 console.log(typeof myObj); // object
 console.log(typeof myFunc) // function
+
+//++++++++++++++++++++++++++++ MEMORY
+// Stack memory: primitive data types
+// Heap mempry: non-primitive data types or reference data types
+let userName = 'shubham';
+let anotherName = 'Rishab';
+console.log(userName); // 'shubham'
+console.log(anotherName);// 'Rishab'
+
+anotherName = userName;
+console.log(userName); // 'shubham'
+console.log(anotherName);// 'shubham'
+
+userName = 'prateek';
+console.log(userName); // 'prateek'
+console.log(anotherName);// 'shubham'
+
+
+let myFirstObj = {
+    id: 1,
+    name: 'shubham'
+}
+let mySecondObj = myFirstObj;
+console.log(myFirstObj); // {id: 1, name: 'shubham'}
+console.log(mySecondObj); // {id: 1, name: 'shubham'}
+
+mySecondObj.name = 'Hitesh'; 
+console.log(myFirstObj); // {id: 1, name: 'Hitesh'}
+console.log(mySecondObj); // {id: 1, name: 'Hitesh'}
+
+/**
+ * stack memory mai variable, location ka name hua and jab primitive data types define kiya to repsective location mai uski value store hui
+ * and jab copy kiya usko dusre variable mai to wo new variable ki location mai value copy hogyi
+ * whereas jab non-primitive data types define to stack memory mai value ki jagah heapy memory ki location reference save hua jahan uski value hai
+ * to jab non primitive data type ko copy kiya to actually location refrence copy hua na ki value to dono at end same location ko point kar rahe
+ * islye agar ek jagah change karengey to dono jagah change hoga
+ */
