@@ -48,3 +48,25 @@ console.log(Object.entries(tinderUser)); // har key value ko ek araay ke andar d
 ]
  */
 console.log(tinderUser.hasOwnProperty('isLoggedIn')); // true
+
+// +++++++ DeStructuring
+
+const course = {
+    coursename: 'js hindi',
+    price: 999,
+    courseInstructor: 'Hitesh'
+}
+// const {coursename} = course; SYNTAX1
+//console.log(coursename); // js hindi
+
+const {coursename : name} = course; // SYNTAX2
+console.log(name); // js hindi
+
+// In react we can destructure the props
+
+// JSON
+/* {
+    'name': 'hitesh',
+    'coursename': 'js hindi',
+    'price': '99' 
+} */
