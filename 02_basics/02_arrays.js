@@ -14,7 +14,7 @@ console.log(marvel_heroes); //[ 'thor', 'ironman', 'spiderman' ] */
 
 const another_array = [1,2,3,[4,5],[5,6,[1,2,3]]];
 // const usable_array = another_array.flat(2);// [1, 2, 3, 4, 5, 5, 6, 1, 2, 3]
-const usable_array = another_array.flat(Infinity); // [1, 2, 3, 4, 5, 5, 6, 1, 2, 3]
+const usable_array = another_array.flat(Infinity); // [1, 2, 3, 4, 5, 5, 6, 1, 2, 3] => infinity depth tak sare elements ko merge kardo ek arary mai
 console.log(usable_array);
 
 console.log(Array.isArray('Hitesh')) //false

@@ -28,3 +28,13 @@ console.log(sentence.includes('FOX')) // false
 console.log(sentence.includes('')) // true
 
 // ++++++++++++++++     indexOf() method
+
+const myName = ' shubham ';
+console.log('myName trim', myName.trim());
+
+const url = 'https://www.youtube.com/watch?10%v=fozwNnFunlo&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=11';
+console.log(url.replace('%10', '-'));
+
+/**** split() method */
+const game = 'ab-cd-ef';
+console.log(game.split('-')); // ['ab','cd','ef']

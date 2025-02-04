@@ -7,14 +7,14 @@ console.log(myArr2);
 
 // Array are reference data types and basically objects in JS
 // Arrays are resizable matlab ek baar declare kar diya to aisa nahi ki aur elements add nahi kar saktey
-// array elements ko koi bhi random ya arbitrary string se acces nahi kar skte hum usko  nonnegative integers (or their respective string form) as indexes se hi access kar skte
+// array elements ko koi bhi random ya arbitrary string se acces nahi kar skte hum usko  nonnegative integers (or their respective string form) as indexes se hi access kar skte like myHeroes[2] is same as myHeroes['2']
 // JavaScript array-copy operations create shallow copies not deep copies
 
 // +++++ Array methods
 const myArr3 = ['1','2',3,4,true, {name:'shubham'}];
 myArr3.push(6); // adds the element at the end of an array
 myArr3.pop(); // removes the element from an end
-myArr3.unshift(9); // adds the element at the start of an array
+myArr3.unshift(9); // adds the element at the start of an array // [9, '1', '2', 3, 4, true, {name:'shubham'}];
 // people say unshift is bad as it altered every element position so if we have 10000 elements it will take a load on computer
 // but its ok if we relaly need we can use it and optimize it later
 myArr3.shift();
