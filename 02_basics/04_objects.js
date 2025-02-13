@@ -39,7 +39,7 @@ console.log('By spread operator', obj6) //{ '1': 'a', '2': 'b', '3': 'c', '4': '
 console.log(tinderUser); // { id: 'abc123', name: 'Shubham Saxena', isLoggedIn: false }
 console.log(Object.keys(tinderUser)); // [ 'id', 'name', 'isLoggedIn' ]
 console.log(Object.values(tinderUser)); // [ 'abc123', 'Shubham Saxena', false ]
-console.log(Object.entries(tinderUser)); // har key value ko ek araay ke andar dal deta hai and ek array deta hao
+console.log(Object.entries(tinderUser)); // har key value ko ek araay  ke andar dal deta hai and ek array deta hao
 /** 
  * [
   [ 'id', 'abc123' ],
@@ -64,7 +64,7 @@ console.log(name); // js hindi
 
 // In react we can destructure the props
 
-// JSON
+// JSON we can format by uisng diff tools like json Formatter
 /* {
     'name': 'hitesh',
     'coursename': 'js hindi',

@@ -12,6 +12,8 @@ if (true) { // local scope started
 // console.log('a outside : ',a );  //ReferenceError: a is not defined
 // console.log('b outside : ',b ); // ReferenceError: b is not defined
 // console.log('c outside : ',c ); //30 ----> Big mistake as inside local scope c overided global scope c because we have declared it by var
+// var ---> global scope , let const --> block scope
+
 
 // +++++++++++++++  Understanding function in scope level context
 
@@ -38,7 +40,7 @@ function addone(num){
 // addone(5)
 // console.log(addone(5)); 6
 
-// addtwo(5) cannot access addtwo before initialization
+// addtwo(5) cannot access addtwo before declaration
 const addtwo = function(num){
     return num + 2;
 }

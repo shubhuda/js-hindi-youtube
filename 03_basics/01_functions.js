@@ -40,10 +40,13 @@ function loggedInMessage(username){
 console.log(loggedInMessage('shubham')); // shubham just logged in
 console.log(loggedInMessage()); // undefined just logged in
 
-const calculateCartPrice = (...num) => { //rest operator
+/* const calculateCartPrice = (...num) => { //rest operator jitne bhi arguments ayen sabko ek array mai dalke  function ko deta hai
+    return num;
+} */
+const calculateCartPrice = (val1, val2, ...num) => { //another way
     return num;
 }
-console.log(calculateCartPrice(200,400,500)); // [200,400,500]
+console.log('calculateCartPrice---->',calculateCartPrice(200,400,500)); // [200,400,500]
 
 const handleObject = (anyobject) => { // How to pass object as an argument
     return `My user name is ${anyobject.username} and price is ${anyobject.price}`;

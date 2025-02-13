@@ -36,8 +36,8 @@ console.log(jsUser.location);
     console.log('Hello JS user');
  }
  jsUser.greetingTwo = function(){
-    console.log(`Hello JS user, ${this.name}`);
+    console.log(`Hello JS user, ${this.name}`); // same object ko reference karne ke liye 'this' ka use kiya hai
  }
- console.log(jsUser.greeting); // [Function (anonymous)]
+ console.log(jsUser.greeting); // [Function (anonymous)] // function ka return nahi aya hai bs refernce aya hai
  console.log(jsUser.greetingTwo()); // Hello JS user, Shubham
 

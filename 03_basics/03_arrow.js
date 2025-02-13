@@ -1,3 +1,5 @@
+
+// 'this', refers to current context
 const user = {
     username: 'Shubham',
     price: '$99',
@@ -5,13 +7,14 @@ const user = {
     welcomeMessage : function(){
         // console.log(`${username}, welcome to website`); // ReferenceError: username is not defined
         console.log(`${this.username}, welcome to website`);
-        // console.log('inner this', this);
+        //console.log('inner this', this);
     }
 }
 
 user.welcomeMessage(); // Shubham, welcome to website
-// console.log('outer this', this);   // {}
+console.log('outer this', this);   // {}
 // but the same this in browser console gives window object, in node env its giving empty object
+// kyunki ab browser se javascript engine(node, deno, bun ) ko alg bhi kar diya gaya hai wo standalone bhi available hai bt pehle sirf browser mahi hi tha and browser mai hi javascrpt run kar patey th
 
 /* user.username = 'Sam';
 user.welcomeMessage() //Sam, welcome to website */
@@ -56,7 +59,7 @@ const chaiThree = () => {
     console.log(this);
 }
 chaiThree();
-
+// so basically we are able to use this only inside object conetxt not in regular fn and arrow fns
 /** Way of writing arrow functions */
 
 const addNumOne = (num1, num2) => {
@@ -64,6 +67,6 @@ const addNumOne = (num1, num2) => {
 }
 const addNumTwo= (num1, num2) => num1 + num2;
 
-const addNumThree= (num1, num2) => (num1 + num2);
+const addNumThree= (num1, num2) => (num1 + num2); // yahan round brackets mai return nahi likhna padta
 
 const returnObjectImplicit = () => ({name: 'shubham', price: '$55'})

@@ -1,3 +1,6 @@
+
+// Everything executes in thread way and Jaavscript is single threaded
+
 /**
  *  1. In JS we have two things a.) execution context b.) call stack
  *  2. Execution contexts ---> a.) Global execution context b.) function execution context
@@ -37,3 +40,4 @@ function three(){
 }
 one();
 // call stack mai se pehle three bahar jayega fr two fr one LIFO (last in first out wala concept)
+// https://excalidraw.com/#json=e88flbZre1NP6TInFP4Oo,_h9Yz92A8abumEm5-S03QA

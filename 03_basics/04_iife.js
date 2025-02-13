@@ -8,9 +8,9 @@
 }() */ 
 
 // --->
-(function chai () {
+(function chai () { // Named IIFE
     console.log('DB CONNECTED')
-})(); // VERY IMPORTANT TO PUT SEMICOLON so that next iife can execute
+})(); // VERY IMPORTANT TO PUT SEMICOLON so that next iife can execute as javascript doesnt know when iife context will end
 //DB CONNECTED
 
 (() => {
