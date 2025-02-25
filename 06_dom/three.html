@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = 'shubham'
+    div.id = Math.round(Math.random()*10 + 1);
+    div.setAttribute('title','generated-title');
+    div.style.backgroundColor = 'black';
+    div.style.color = 'white';
+   // div.innerText = 'my first inserted div'; // Usually this way first takes the reference of actual text if available then override it which is little expensive way
+    const addtext = document.createTextNode('cHai aurr code')
+    div.appendChild(addtext);
+    document.body.appendChild(div);
+
+
+    
+</script>
+</html>
