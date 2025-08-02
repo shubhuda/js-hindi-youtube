@@ -5,13 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Events</title>
 </head>
-<body>
+<body style="background-color: azure;">
     <ul id="images">
-        <li><img src="https://picsum.photos/200/300" alt="" id="img1"></li>
-        <li><img src="https://picsum.photos/200/400" alt="" id="img2"></li>
-        <li><img src="https://picsum.photos/200/500" alt="" id="img3"></li>
-        <li><img src="https://picsum.photos/200/600" alt="" id="img4"></li>
-        <li><img src="https://picsum.photos/200/700" alt="" id="img5"></li>
+        <li><img src="https://picsum.photos/200/300" alt="img-1" id="img1"></li>
+        <li><img src="https://picsum.photos/200/400" alt="img-1" id="img2"></li>
+        <li><img src="https://picsum.photos/200/500" alt="img-1" id="img3"></li>
+        <li><img src="https://picsum.photos/200/600" alt="img-1" id="img4"></li>
+        <li><img src="https://picsum.photos/200/700" alt="img-1" id="img5"></li>
+        <li id="link"><a href="https://www.youtube.com/">Click here to learn more</a></li>
     </ul>
 </body>
+<script>
+    // In javscript all events run sqeuentially only except few
+
+/*     document.getElementById('img1').onclick = function () {  // onclick gives less features instead use event listeners so that you have more information about propgation
+        alert('first image')
+    } */
+
+/* document.getElementById('img-1').addEventListener('click', function(){
+    alert('again')
+}, false); */
+
+// attachEvent (this is used when we need to run an event in IE)
+// onEvent (during jQuery)
+
+/*** what to read */
+// types, timestamp, defaultPrevented
+// target, toElement, srcElement, currentTarget
+// clientX, clientY, offset, screenX, screenY
+// altkey, ctrlKey, shiftKey, keyCode
+// Project: detremine the keyboard speed of the user when user enters text
+
+// Events type - browser events, environment events
+document.getElementById('img1').addEventListener('click', function(e){
+    console.log(e);
+}, false);
+
+// Question in interviews: tell the time when user clicks on the particular image
+document.getElementById('img2').addEventListener('click', function(e){
+    console.log(e)
+    const dateObj = new Date(e.timeStamp);
+    console.log(dateObj.toLocaleString());
+}, false);
+
+// To understand event propogation- event Bubbling and event Capturing
+document.getElementById('images').addEventListener('click', function(e){
+    console.log('ul clicked');
+}, false)
+document.getElementById('img3').addEventListener('click',function(e){
+    e.stopPropagation(); // to stop event bubbling
+    console.log('inside image clicked');
+}, false)
+// In above scenario event capturing is false by default that means the default mode is event bubbling, so what happens when user clicked on inside image as inside image also
+// comes under ul so which console will get printed, if we make thir argument as true see teh changes
+// Event bubbling  -> inside to outside
+// Event capturing -> outside to inside
+
+// PreventDefault
+document.getElementById('link').addEventListener('click', function(e){
+    console.log('google clciked')
+    e.preventDefault();
+    e.stopPropagation();
+}, false)
+
+
+// Implement when user clicks on images it gets removed from the screen
+document.querySelector()
+
+
+
+
+</script>
 </html>
