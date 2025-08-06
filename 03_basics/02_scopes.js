@@ -40,7 +40,7 @@ function addone(num){
 // addone(5)
 // console.log(addone(5)); 6
 
-// addtwo(5) cannot access addtwo before declaration
+// addtwo(5) cannot access addtwo before declaration 
 const addtwo = function(num){
     return num + 2;
 }

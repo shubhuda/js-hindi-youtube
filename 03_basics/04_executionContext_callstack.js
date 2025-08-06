@@ -1,5 +1,5 @@
 
-// Everything executes in thread way and Jaavscript is single threaded
+// Everything executes in thread way and Jaavscript is single threaded and synchronous by default
 
 /**
  *  1. In JS we have two things a.) execution context b.) call stack
@@ -41,3 +41,13 @@ function three(){
 one();
 // call stack mai se pehle three bahar jayega fr two fr one LIFO (last in first out wala concept)
 // https://excalidraw.com/#json=e88flbZre1NP6TInFP4Oo,_h9Yz92A8abumEm5-S03QA
+
+/**
+ * stack memory mai variable, location ka name hua and jab primitive data types define kiya to repsective location mai uski value store hui
+ * and jab copy kiya usko dusre variable mai to wo new variable ki location mai value copy hogyi
+ * whereas jab non-primitive data types define to stack memory mai value ki jagah heapy memory ki location reference save hua jahan uski value hai
+ * to jab non primitive data type ko copy kiya to actually location refrence copy hua na ki value to dono at end same location ko point kar rahe
+ * islye agar ek jagah change karengey to dono jagah change hoga
+ */
+
+// https://excalidraw.com/#json=ZY321_uI2-GL5ENq0P3JJ,_a6flKNFb8DP9p94h9sFcg
