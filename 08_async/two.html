@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Best JS series</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+
+    <script>
+
+        const startTimer = () => setInterval(function(){
+            console.log('Shubham', Date.now())
+        }, 1000)
+        // setInterval(): kuch kaam karwana hai after specific interval which is diff than setTimeout() jahan bs ek baar kaam karwa skte
+        document.querySelector('#start').addEventListener('click', startTimer);
+    </script>
+</body>
+</html>
